@@ -5,7 +5,27 @@
 > 输入一家美股公司，快速看懂它最近一个财年发生了什么，并让重要解释尽可能回到 SEC 官方披露。
 
 
+## 🖥️ Demo
 
+### 1. Company Overview
+
+输入股票代码后，系统从最新年度 10-K 中读取 SEC XBRL 财务数据，展示 Revenue、Net Income 和 Operating Cash Flow 等核心指标。
+
+![Company Overview](assets/demo1.png)
+
+### 2. Evidence-Grounded Interpretation
+
+AI 不直接猜测公司变化原因，而是先从 10-K MD&A 中寻找管理层披露，再基于锁定的财务事实和证据生成解释。
+
+![Evidence-Grounded Interpretation](assets/demo2.png)
+
+### 3. Traceable SEC Evidence
+
+每个重要解释尽可能保留对应的 Evidence ID 和 SEC 原文，让用户能够区分财务事实、管理层解释和 AI Interpretation。
+
+![Traceable SEC Evidence](assets/demo3.png)
+
+---
 公司显微镜是一个面向普通个人投资者的 AI 公司研究助手。
 
 
