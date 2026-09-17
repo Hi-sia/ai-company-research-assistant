@@ -1,0 +1,13 @@
+case_id,company,task,evidence_id,scope,support,fact_fidelity,evidence_relevance,scope_accuracy,unsupported_claim,correct_abstention,interpretation_value,notes
+E01,AAPL,Revenue,P008,component,partial,PASS,PASS,PASS,PASS,N/A,PASS,"Americas-level evidence; correctly not generalized to company-wide revenue growth."
+E02,AAPL,Profit,P021,component,partial,PASS,PASS,PASS,PASS,N/A,PASS,"Products gross-margin evidence; correctly treated as partial rather than a complete explanation of company profit."
+E03,AAPL,Cash,None,none,insufficient,PASS,N/A,PASS,PASS,PASS,PASS,"No sufficient operating-cash-flow driver evidence selected; system correctly abstained from inventing a cause."
+E04,AAPL,Risk,P006,company,direct,PASS,PASS,PASS,PASS,N/A,PASS,"Company-level tariff and trade-risk disclosure; uncertainty and forward-looking nature preserved."
+E05,MSFT,Revenue,P042,component,partial,PASS,PASS,PASS,PASS,N/A,PASS,"Microsoft 365 Commercial evidence; correctly limited to a component of company revenue."
+E06,MSFT,Profit,P047,company,direct,PASS,PASS,FAIL,PASS,N/A,PASS,"Company-level evidence explains gross profit and gross margin, but target facts are net income and operating income. Direct-support classification is too strong."
+E07,MSFT,Cash,P081,company,direct,PASS,PASS,PASS,PASS,N/A,PASS,"Direct company-level explanation of operating cash-flow growth. Interpretation includes some non-essential investing and financing cash-flow details."
+E08,MSFT,Risk,P012,company,direct,PASS,PASS,PASS,PASS,N/A,PASS,"Company-level economic and trade-policy risk disclosure; no unsupported probability or future impact added."
+E09,NVDA,Revenue,P041,component,partial,PASS,PASS,PASS,PASS,N/A,PASS,"Compute & Networking / Data Center evidence correctly treated as partial. Minor wording issue: interpretation says revenue growth was mainly linked to platform shifts, which could sound broader than the component-level evidence."
+E10,NVDA,Profit,P024,company,direct,PASS,PASS,FAIL,PASS,N/A,PASS,"Company-level operating-expense evidence is relevant to profitability but does not directly explain net-income or operating-income growth. Direct-support classification is too strong."
+E11,NVDA,Cash,P065,company,direct,PASS,PASS,PASS,PASS,N/A,PASS,"Direct company-level explanation that operating cash-flow growth was due to higher revenue; no additional causes invented."
+E12,NVDA,Risk,P008,component,partial,PASS,PASS,PASS,PASS,N/A,PASS,"Data Center compute product-transition risk correctly kept at component scope; uncertainty and lack of quantified future impact preserved."

@@ -1,0 +1,98 @@
+{
+  "company": "Apple Inc.",
+  "ticker": "AAPL",
+  "fiscal_year": 2025,
+  "fiscal_year_end": "2025-09-27",
+  "filing_date": "2025-10-31",
+
+  "source": {
+    "document": "Apple Inc. 2025 Form 10-K",
+    "source_type": "SEC Filing",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+  },
+
+  "financials": {
+    "revenue": {
+      "label": "总净销售额",
+      "2025": 416161,
+      "2024": 391035,
+      "unit": "USD million",
+      "evidence": "Consolidated Statements of Operations"
+    },
+
+    "net_income": {
+      "label": "净利润",
+      "2025": 112010,
+      "2024": 93736,
+      "unit": "USD million",
+      "evidence": "Consolidated Statements of Operations"
+    },
+
+    "operating_income": {
+      "label": "营业利润",
+      "2025": 133050,
+      "2024": 123216,
+      "unit": "USD million",
+      "evidence": "Consolidated Statements of Operations"
+    },
+
+    "operating_cash_flow": {
+      "label": "经营活动现金流",
+      "2025": 111482,
+      "2024": 118254,
+      "unit": "USD million",
+      "evidence": "Consolidated Statements of Cash Flows"
+    }
+  },
+
+  "business_lines": {
+    "iphone": {
+      "label": "iPhone",
+      "2025": 209586,
+      "2024": 201183,
+      "unit": "USD million",
+      "evidence": "Products and Services Performance"
+    },
+
+    "mac": {
+      "label": "Mac",
+      "2025": 33708,
+      "2024": 29984,
+      "unit": "USD million",
+      "evidence": "Products and Services Performance"
+    },
+
+    "ipad": {
+      "label": "iPad",
+      "2025": 28023,
+      "2024": 26694,
+      "unit": "USD million",
+      "evidence": "Products and Services Performance"
+    },
+
+    "wearables": {
+      "label": "Wearables, Home and Accessories",
+      "2025": 35686,
+      "2024": 37005,
+      "unit": "USD million",
+      "evidence": "Products and Services Performance"
+    },
+
+    "services": {
+      "label": "Services",
+      "2025": 109158,
+      "2024": 96169,
+      "unit": "USD million",
+      "evidence": "Products and Services Performance"
+    }
+  },
+
+  "risk_topics": [
+    "宏观经济环境与消费者支出",
+    "国际贸易、关税与地缘政治",
+    "全球供应链与制造",
+    "市场竞争",
+    "法律与监管变化",
+    "隐私与网络安全"
+  ]
+}
