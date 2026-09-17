@@ -1,4 +1,4 @@
-# 🔎 公司显微镜 · AI Company Research Assistant
+﻿# 🔎 公司显微镜 · AI Company Research Assistant
 
 
 
@@ -34,7 +34,7 @@ AI 不直接猜测公司变化原因，而是先从 10-K MD&A 中寻找管理层
 
 
 
-> \*\*如何让 AI 的公司研究既有解释价值，又尽量减少“听起来合理、但没有证据”的分析？\*\*
+> **如何让 AI 的公司研究既有解释价值，又尽量减少“听起来合理、但没有证据”的分析？**
 
 
 
@@ -60,7 +60,7 @@ AI 不直接猜测公司变化原因，而是先从 10-K MD&A 中寻找管理层
 
 
 
-\## 🎯 Problem
+## 🎯 Problem
 
 
 
@@ -88,9 +88,9 @@ AI 不直接猜测公司变化原因，而是先从 10-K MD&A 中寻找管理层
 
 
 
-> \*\*如果限制太少，AI 容易 hallucinate；  
+> **如果限制太少，AI 容易 hallucinate；  
 
-> 如果限制太强，只允许 AI 看几个财务数字，回答又会变得正确但没有价值。\*\*
+> 如果限制太强，只允许 AI 看几个财务数字，回答又会变得正确但没有价值。**
 
 
 
@@ -98,7 +98,7 @@ AI 不直接猜测公司变化原因，而是先从 10-K MD&A 中寻找管理层
 
 
 
-\## 💡 Product Hypothesis
+## 💡 Product Hypothesis
 
 
 
@@ -118,7 +118,7 @@ AI 不直接猜测公司变化原因，而是先从 10-K MD&A 中寻找管理层
 
 
 
-\### Fact
+### Fact
 
 
 
@@ -130,7 +130,7 @@ Revenue、Net Income、Operating Income、Operating Cash Flow 等核心数字来
 
 
 
-\### Management Explanation
+### Management Explanation
 
 
 
@@ -142,7 +142,7 @@ Revenue、Net Income、Operating Income、Operating Cash Flow 等核心数字来
 
 
 
-\### AI Interpretation
+### AI Interpretation
 
 
 
@@ -150,7 +150,7 @@ LLM 的任务不是创造事实，而是：
 
 
 
-> \*\*把已经锁定的 Fact + Evidence 翻译成普通用户容易理解的语言。\*\*
+> **把已经锁定的 Fact + Evidence 翻译成普通用户容易理解的语言。**
 
 
 
@@ -158,7 +158,7 @@ LLM 的任务不是创造事实，而是：
 
 
 
-> \*\*现有 SEC 证据不足以判断具体原因。\*\*
+> **现有 SEC 证据不足以判断具体原因。**
 
 
 
@@ -166,7 +166,7 @@ LLM 的任务不是创造事实，而是：
 
 
 
-\## 🧠 Core Product Principle
+## 🧠 Core Product Principle
 
 
 
@@ -174,9 +174,9 @@ LLM 的任务不是创造事实，而是：
 
 
 
-> \*\*LLM 负责怎么讲，程序负责怎么算；  
+> **LLM 负责怎么讲，程序负责怎么算；  
 
-> AI 不只是回答“找到了什么证据”，还要知道“这条证据允许自己说到什么程度”。\*\*
+> AI 不只是回答“找到了什么证据”，还要知道“这条证据允许自己说到什么程度”。**
 
 
 
@@ -184,7 +184,7 @@ LLM 的任务不是创造事实，而是：
 
 
 
-\*\*Scope\*\*
+**Scope**
 
 
 
@@ -196,7 +196,7 @@ LLM 的任务不是创造事实，而是：
 
 
 
-\*\*Metric Alignment\*\*
+**Metric Alignment**
 
 
 
@@ -208,7 +208,7 @@ LLM 的任务不是创造事实，而是：
 
 
 
-\*\*Support\*\*
+**Support**
 
 
 
@@ -252,7 +252,7 @@ exact metric alignment
 
 
 
-\## 🏗️ Architecture
+## 🏗️ Architecture
 
 
 
@@ -366,7 +366,7 @@ Fact
 
 
 
-\## 🛡️ Why Not Let the LLM Do Everything?
+## 🛡️ Why Not Let the LLM Do Everything?
 
 
 
@@ -416,11 +416,11 @@ Grounded where necessary.
 
 
 
-\## 🔍 Evidence Pipeline
+## 🔍 Evidence Pipeline
 
 
 
-\### 1. SEC XBRL Fact Layer
+### 1. SEC XBRL Fact Layer
 
 
 
@@ -494,7 +494,7 @@ RevenueFromContractWithCustomerExcludingAssessedTax
 
 
 
-\### 2. MD\&A Section Extraction
+### 2. MD\&A Section Extraction
 
 
 
@@ -534,7 +534,7 @@ Management's Discussion and Analysis
 
 
 
-\### 3. Theme Gate
+### 3. Theme Gate
 
 
 
@@ -562,7 +562,7 @@ primarily due to
 
 
 
-> \*\*包含因果词 ≠ 与当前问题真正相关。\*\*
+> **包含因果词 ≠ 与当前问题真正相关。**
 
 
 
@@ -582,7 +582,7 @@ primarily due to
 
 
 
-\### 4. Evidence Selector
+### 4. Evidence Selector
 
 
 
@@ -590,7 +590,7 @@ Theme Gate 解决了明显的跨主题误匹配，但又出现新的问题：
 
 
 
-> \*\*相关证据 ≠ 足以回答问题的证据。\*\*
+> **相关证据 ≠ 足以回答问题的证据。**
 
 
 
@@ -642,7 +642,7 @@ LLM 无法通过输出一个不存在的 Evidence ID 绕过候选池。
 
 
 
-\### 5. Grounded Interpreter
+### 5. Grounded Interpreter
 
 
 
@@ -712,7 +712,7 @@ support = insufficient
 
 
 
-\## 🧪 Evaluation
+## 🧪 Evaluation
 
 
 
@@ -720,7 +720,7 @@ support = insufficient
 
 
 
-\### Evaluation V0.2
+### Evaluation V0.2
 
 
 
@@ -788,7 +788,7 @@ support = insufficient
 
 
 
-\## 🔬 What Evaluation Found
+## 🔬 What Evaluation Found
 
 
 
@@ -800,7 +800,7 @@ Evaluation 的目标不是证明系统“100% 准确”。
 
 
 
-\### MSFT Profit
+### MSFT Profit
 
 
 
@@ -832,7 +832,7 @@ Operating Income / Net Income
 
 
 
-\### NVDA Profit
+### NVDA Profit
 
 
 
@@ -924,7 +924,7 @@ Is this actually about the target metric?
 
 
 
-\## 🧯 Abstention as a Product Feature
+## 🧯 Abstention as a Product Feature
 
 
 
@@ -978,7 +978,7 @@ Interpreter 不会用收入、利润、关税或其他“听起来合理”的�
 
 
 
-> \*\*现有 SEC 证据不足以判断具体原因。\*\*
+> **现有 SEC 证据不足以判断具体原因。**
 
 
 
@@ -986,7 +986,7 @@ Interpreter 不会用收入、利润、关税或其他“听起来合理”的�
 
 
 
-> \*\*“不知道”不是模型失败，而是一种受控的系统状态。\*\*
+> **“不知道”不是模型失败，而是一种受控的系统状态。**
 
 
 
@@ -994,7 +994,7 @@ Interpreter 不会用收入、利润、关税或其他“听起来合理”的�
 
 
 
-\## 🔄 Product Iteration
+## 🔄 Product Iteration
 
 
 
@@ -1102,7 +1102,7 @@ Evidence-Grounded Company Research Assistant
 
 
 
-\## 🖥️ Current Product Experience
+## 🖥️ Current Product Experience
 
 
 
@@ -1214,7 +1214,7 @@ SEC 原文 Evidence
 
 
 
-\## 📊 Current Scope
+## 📊 Current Scope
 
 
 
@@ -1222,7 +1222,7 @@ SEC 原文 Evidence
 
 
 
-\*\*Supported\*\*
+**Supported**
 
 
 
@@ -1246,7 +1246,7 @@ SEC 原文 Evidence
 
 
 
-\*\*Not included\*\*
+**Not included**
 
 
 
@@ -1276,7 +1276,7 @@ SEC 原文 Evidence
 
 
 
-\## 🧰 Tech Stack
+## 🧰 Tech Stack
 
 
 
@@ -1304,11 +1304,11 @@ DeepSeek via Volcengine Ark
 
 
 
-\## 🚀 Run Locally
+## 🚀 Run Locally
 
 
 
-\### 1. Clone the repository
+### 1. Clone the repository
 
 
 
@@ -1322,7 +1322,7 @@ cd ai-company-research-assistant
 
 
 
-\### 2. Create a virtual environment
+### 2. Create a virtual environment
 
 
 
@@ -1334,7 +1334,7 @@ python -m venv .venv
 
 
 
-\### 3. Activate it
+### 3. Activate it
 
 
 
@@ -1350,7 +1350,7 @@ Windows PowerShell:
 
 
 
-\### 4. Install dependencies
+### 4. Install dependencies
 
 
 
@@ -1362,7 +1362,7 @@ pip install streamlit openai
 
 
 
-\### 5. Configure environment variables
+### 5. Configure environment variables
 
 
 
@@ -1386,7 +1386,7 @@ Do not commit API keys to GitHub.
 
 
 
-\### 6. Run
+### 6. Run
 
 
 
@@ -1402,7 +1402,7 @@ streamlit run app.py
 
 
 
-\## 📁 Project Structure
+## 📁 Project Structure
 
 
 
@@ -1468,7 +1468,7 @@ app.py
 
 
 
-\## ⚠️ Limitations
+## ⚠️ Limitations
 
 
 
@@ -1504,7 +1504,7 @@ The evaluation results therefore should not be interpreted as a general accuracy
 
 
 
-\## 🧭 What I Learned
+## 🧭 What I Learned
 
 
 
@@ -1516,7 +1516,7 @@ The evaluation results therefore should not be interpreted as a general accuracy
 
 
 
-\### 1. Hallucination is partly a product architecture problem
+### 1. Hallucination is partly a product architecture problem
 
 
 
@@ -1548,7 +1548,7 @@ The evaluation results therefore should not be interpreted as a general accuracy
 
 
 
-\### 2. Reliability and usefulness can conflict
+### 2. Reliability and usefulness can conflict
 
 
 
@@ -1580,7 +1580,7 @@ The evaluation results therefore should not be interpreted as a general accuracy
 
 
 
-> \*\*usefulness × groundedness\*\*
+> **usefulness × groundedness**
 
 
 
@@ -1588,7 +1588,7 @@ The evaluation results therefore should not be interpreted as a general accuracy
 
 
 
-\### 3. Evaluation should change the product
+### 3. Evaluation should change the product
 
 
 
@@ -1620,7 +1620,7 @@ Metric Alignment
 
 
 
-\## 📌 Disclaimer
+## 📌 Disclaimer
 
 
 
@@ -1633,4 +1633,5 @@ It does not provide investment advice, investment ratings, price targets, or pre
 
 
 Financial information should always be verified against the original SEC filing.
+
 
